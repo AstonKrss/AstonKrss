@@ -58,13 +58,13 @@
 
 ### 各自的难点在哪
 
-**ChatServer —— 手写三个协议栈。** `core` 是 EventLoop → Poller → Channel → Acceptor / TcpConnection
-+ Timer，`protocol` 里 HTTP/1.1、WebSocket、SMTP 各自独立解析器，`service` 再叠用户、消息、频道、好友。
+**ChatServer —— 手写三个协议栈。** `core` 是 EventLoop → Poller → Channel → Acceptor / TcpConnection + Timer；
+`protocol` 里 HTTP/1.1、WebSocket、SMTP 各自独立解析器，`service` 再叠用户、消息、频道、好友。
 HTTP 侧要处理 `Content-Length` 与 `Connection` 语义，WebSocket 要接分片帧和关闭握手，SMTP 是完整的
 会话状态机。不用 `muduo` 自己写一遍，才知道半包该攒在哪。
 
-**heartbeatd —— 把内核批量接口吃满。** 32 字节 UDP 报文带稳定 `host_id` + 每次启动新生成的 `boot_id`
-+ 递增序号，就能区分**上线 / 重启 / 超时离线**三种事件，不用付 TCP 握手或 ICMP 被封的代价。
+**heartbeatd —— 把内核批量接口吃满。** 32 字节 UDP 报文里带稳定 `host_id`、每次启动新生成的 `boot_id` 和一个递增序号，
+就能区分**上线 / 重启 / 超时离线**三种事件，不用付 TCP 握手或 ICMP 被封的代价。
 4 receiver + 4 worker，loopback 压到 **116 万 pps 零丢包，p99 < 500 µs**；`kernel_dropped`
 （该调 `SO_RCVBUF`）和 `queue_dropped`（该加队列或加 worker）分开计数，因为排查方向完全不同。
 
