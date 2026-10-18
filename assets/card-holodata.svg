@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="424" height="176" viewBox="0 0 424 176" role="img"><style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;}</style>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.45" stop-color="#141b2d"/>
+      <stop offset="1" stop-color="#0b0f18"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="topline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="blobA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.70"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f472b6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f472b6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="0.55" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#05070d" flood-opacity="0.55"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <clipPath id="avatarClip"><circle cx="96" cy="116" r="46"/></clipPath>
+  </defs>
+<defs><clipPath id="cc"><rect width="424" height="176" rx="20" ry="20"/></clipPath></defs><g clip-path="url(#cc)">
+  <rect x="0" y="0" width="424" height="176" fill="url(#base)"/>
+  <ellipse cx="60" cy="18" rx="150" ry="92" fill="url(#blobA)" opacity="0.42" filter="url(#soft)"/>
+  <ellipse cx="382" cy="176" rx="140" ry="86" fill="url(#blobB)" opacity="0.34" filter="url(#soft)"/>
+  <rect x="0" y="0" width="424" height="176" fill="url(#base)" opacity="0.34"/>
+  <rect x="0" y="0" width="424" height="176" filter="url(#grain)" opacity="0.05"/>
+  <g >
+    <rect x="6" y="6" width="412" height="164" rx="18" fill="url(#glass)"
+          stroke="url(#edge)" stroke-width="1.2" filter="url(#shadow)"/>
+    <rect x="7" y="7" width="410" height="1.4" rx="0.7" fill="url(#topline)"/>
+  </g><rect x="22" y="6.6" width="86" height="2.4" rx="1.2" fill="#3572A5" opacity="0.95"/><text x="22" y="44" font-size="18.5" font-weight="700" fill="#f2f6ff">HoloData-PII-Scanner</text><rect x="255.6" y="22" width="146.4" height="24.0" rx="12.0" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="268.6" cy="34.0" r="3" fill="#3572A5"/><text x="277.6" y="38.0" font-size="11" font-weight="500" fill="#dfe7f8" opacity="1.0">6 类数据源 · 3 种识别</text><text x="22" y="70" font-size="13" fill="#c2ccdf" opacity="0.92">数据库敏感信息识别系统。表字段、JSON/XML、Base64、非结</text><text x="22" y="91" font-size="13" fill="#c2ccdf" opacity="0.92">构化文本、图片 OCR、存储过程全扫一遍，按 L2–L4 分级导出</text><text x="22" y="112" font-size="13" fill="#c2ccdf" opacity="0.92">CSV。</text><circle cx="26" cy="150" r="3.4" fill="#3572A5"/><text x="36" y="154" font-size="12" fill="#9fadc7">Python</text><text x="204" y="154" font-size="11.5" fill="#8e9cb6">CRF / BiLSTM ｜ RapidOCR ｜ 6.6k 行</text></g></svg>

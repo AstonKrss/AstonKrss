@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AstonKrss · README 预览</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --border: #d1d9e0;
+    --link: #0969da; --code-bg: #f6f8fa; --th-bg: #f6f8fa; --canvas: #f6f8fa;
+  }
+  [data-theme="dark"] {
+    --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --border: #3d444d;
+    --link: #4493f8; --code-bg: #151b23; --th-bg: #151b23; --canvas: #010409;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--canvas); color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 1012px; margin: 28px auto 60px; background: var(--bg);
+          border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .bar { display: flex; align-items: center; justify-content: space-between;
+         gap: 12px; padding: 12px 24px; border-bottom: 1px solid var(--border);
+         font-size: 13px; color: var(--muted); }
+  .bar b { color: var(--fg); font-weight: 600; }
+  button { font: inherit; font-size: 12px; cursor: pointer; color: var(--fg);
+           background: transparent; border: 1px solid var(--border);
+           border-radius: 6px; padding: 4px 10px; }
+  .markdown-body { padding: 32px 40px 48px; }
+  .markdown-body h1, .markdown-body h2, .markdown-body h3 {
+    font-weight: 600; line-height: 1.25; margin: 28px 0 16px; }
+  .markdown-body h2 { font-size: 24px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .markdown-body h3 { font-size: 18px; }
+  .markdown-body h1 { font-size: 30px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .markdown-body p, .markdown-body li { font-size: 15.5px; }
+  .markdown-body p { margin: 0 0 16px; }
+  .markdown-body a { color: var(--link); text-decoration: none; }
+  .markdown-body a:hover { text-decoration: underline; }
+  .markdown-body img { max-width: 100%; border: 0; }
+  .markdown-body ul { padding-left: 2em; margin: 0 0 16px; }
+  .markdown-body li { margin: 4px 0; }
+  .markdown-body li > strong { color: var(--fg); }
+  .markdown-body table { border-collapse: collapse; margin: 0 0 16px; font-size: 14.5px; }
+  .markdown-body th, .markdown-body td { border: 1px solid var(--border); padding: 7px 12px; }
+  .markdown-body th { background: var(--th-bg); font-weight: 600; text-align: left; }
+  .markdown-body table td img { display: block; }
+  .markdown-body code { background: var(--code-bg); padding: .2em .4em; border-radius: 6px;
+                        font: 85% ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .markdown-body br { line-height: 1; }
+  .spacer { height: 20px; }
+  .footer { padding: 14px 24px; border-top: 1px solid var(--border);
+            font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bar">
+    <span><b>AstonKrss</b> / README.md · 本地预览（GitHub 渲染效果近似）</span>
+    <button id="t">切换深/浅色</button>
+  </div>
+  <div class="markdown-body">
+<div align="center">
+  <a href="https://github.com/AstonKrss">
+    <img src="assets/hero.svg" alt="AstonKrss — 系统底层性能 × 智能体工程" width="100%">
+  </a>
+</div>
+
+<div class="spacer"></div>
+<h2>关于我</h2>
+<p>写代码的时候，我偏爱两头：一头往下，扎进 <code>epoll</code>、协议字节和分片队列，把机器的余量榨出来；
+一头往上，做会自己判断下一步的 Agent，让它不只回答问题，而是把事办完。</p>
+<p>中间那层花活儿我尽量少留 —— 能测量的写数字，测不出来的写边界。</p>
+<ul>
+<li><strong>系统与性能</strong>：C++20 服务端、Reactor 事件循环、手写协议解析、尾延迟直方图</li>
+<li><strong>数据与安全</strong>：敏感信息识别、OCR / NER 落地、数据库侧扫描</li>
+<li><strong>智能体工程</strong>：LangGraph 多节点编排、RAG 政策校验、人机协同审批</li>
+<li><strong>工程习惯</strong>：单测、压测脚本、CI 冒烟；压力测试报告里连机器型号一起写</li>
+<li><strong>正在啃</strong>：xv6 操作系统实验、Java 中间件、并发模型</li>
+</ul>
+<div class="spacer"></div>
+<div align="center">
+  <img src="assets/techstack.svg" alt="技术栈：C / C++17·20 / Go / Java / Python / TypeScript / Linux / WebSocket / MySQL·PostgreSQL / OCR·NER / LangGraph / Git" width="100%">
+</div>
+
+<div class="spacer"></div>
+<h2>精选项目</h2>
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/AstonKrss/ChatServer">
+        <img src="assets/card-chatserver.svg" alt="ChatServer — 从 socket 写起的 C++20 通讯服务器" width="396">
+      </a>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/AstonKrss/heartbeatd">
+        <img src="assets/card-heartbeatd.svg" alt="heartbeatd — 116 万 pps 零丢包的 Linux UDP 心跳服务" width="396">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/AstonKrss/HoloData-PII-Scanner">
+        <img src="assets/card-holodata.svg" alt="HoloData-PII-Scanner — 多维度敏感信息识别系统" width="396">
+      </a>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/AstonKrss/travel-agent">
+        <img src="assets/card-travel-agent.svg" alt="travel-agent — LangGraph 企业差旅 Agent" width="396">
+      </a>
+    </td>
+  </tr>
+</table>
+
+<h3>各自的难点在哪</h3>
+<p><strong>ChatServer —— 手写三个协议栈。</strong> <code>core</code> 是 EventLoop → Poller → Channel → Acceptor / TcpConnection
++ Timer，<code>protocol</code> 里 HTTP/1.1、WebSocket、SMTP 各自独立解析器，<code>service</code> 再叠用户、消息、频道、好友。
+HTTP 侧要处理 <code>Content-Length</code> 与 <code>Connection</code> 语义，WebSocket 要接分片帧和关闭握手，SMTP 是完整的
+会话状态机。不用 <code>muduo</code> 自己写一遍，才知道半包该攒在哪。</p>
+<p><strong>heartbeatd —— 把内核批量接口吃满。</strong> 32 字节 UDP 报文带稳定 <code>host_id</code> + 每次启动新生成的 <code>boot_id</code>
++ 递增序号，就能区分<strong>上线 / 重启 / 超时离线</strong>三种事件，不用付 TCP 握手或 ICMP 被封的代价。
+4 receiver + 4 worker，loopback 压到 <strong>116 万 pps 零丢包，p99 &lt; 500 µs</strong>；<code>kernel_dropped</code>
+（该调 <code>SO_RCVBUF</code>）和 <code>queue_dropped</code>（该加队列或加 worker）分开计数，因为排查方向完全不同。</p>
+<p><strong>HoloData-PII-Scanner —— 同一条数据，五条路径。</strong> 一条身份证号可能藏在 MySQL 的 TEXT 字段、
+导出的 JSON、Base64 编码的附件、一张扫描件图片，或者被拆成几段写进日志正文。七个扫描器
+（结构化 / 半结构化 / 编码 / 文本 / OCR / 数据库对象 / SQL 遍历）共用一套「正则 + 校验码 → 分级」
+的判定，模型用的是 CRF 与 BiLSTM-CRF，图片走 PP-OCRv4。工程上最难的是<strong>别把样本数据带出门</strong>：
+仓库里连 <code>data/</code>、<code>output/</code>、<code>logs/</code> 都进 <code>.gitignore</code>，因为扫描器自己就是最危险的泄露源。</p>
+<p><strong>travel-agent —— 把一次差旅拆成 8 个节点。</strong> 意图识别用便宜的小模型，推理交给大模型；
+政策校验走 RAG 检索企业差旅制度；一旦超预算就中断流程等人审批，审批完从断点恢复；
+前端用 SSE 把节点状态和推荐卡片流式推出来。多智能体最容易写成一锅粥，这里是靠显式状态机
+（<code>update_state</code> + checkpointer）管住的。</p>
+<div class="spacer"></div>
+<h2>上游贡献</h2>
+<p>在别人的大项目里改代码，比在自己的仓库里堆功能更能照见自己的水平边界。</p>
+<p><strong><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a></strong> — 开源 LLM 知识平台（Go）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PR</th>
+<th style="text-align: left;">内容</th>
+<th style="text-align: left;">状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/Tencent/WeKnora/pull/4062">#4062</a></td>
+<td style="text-align: left;"><code>fix(retrieval)</code>：summarize 意图不再走知识库检索</td>
+<td style="text-align: left;">已合并</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/Tencent/WeKnora/pull/4306">#4306</a></td>
+<td style="text-align: left;"><code>fix(chat)</code>：失败的快捷问答轮次落库，刷新后错误不再丢失</td>
+<td style="text-align: left;">已合并</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/Tencent/WeKnora/pull/4390">#4390</a></td>
+<td style="text-align: left;"><code>fix(embed)</code>：访客消息不再污染宿主上下文</td>
+<td style="text-align: left;">未合并</td>
+</tr>
+</tbody>
+</table>
+<p><strong><a href="https://github.com/open-telemetry/opentelemetry-java">open-telemetry/opentelemetry-java</a></strong> — OpenTelemetry Java SDK</p>
+<ul>
+<li><a href="https://github.com/open-telemetry/opentelemetry-java/pull/8953">#8953</a> <code>Include config document path in declarative config error messages</code>
+  把「配置哪一项为空」的报错从 <code>batch span processor exporter is required but is null</code>
+  变成 <code>.tracer_provider.processors[0].batch exporter is required but is null</code>，
+  涉及 10 个工厂类的路径压栈与 4 个测试类改写（+358 / −167），审阅中。</li>
+</ul>
+<div class="spacer"></div>
+<h2>GitHub 数据</h2>
+<div align="center">
+  <img height="168" src="https://github-readme-stats.vercel.app/api?username=AstonKrss&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000&title_color=8b5cf6&icon_color=22d3ee&text_color=8e9cb6&rank_icon=github" alt="AstonKrss 的 GitHub 统计">
+  <img height="168" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AstonKrss&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=8b5cf6&text_color=8e9cb6" alt="最常用的语言">
+</div>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=AstonKrss&hide_border=true&background=00000000&stroke=ffffff26&ring=8b5cf6&fire=22d3ee&currStreakNum=e8eefb&currStreakLabel=8b5cf6&sideNums=e8eefb&sideLabels=8e9cb6&dates=6b7280" alt="连续提交统计">
+</div>
+
+<div class="spacer"></div>
+<h2>其他仓库</h2>
+<ul>
+<li><a href="https://github.com/AstonKrss/xv6-labs-2020">xv6-labs-2020</a> — MIT 6.S081 操作系统实验，从页表到文件系统</li>
+<li><a href="https://github.com/AstonKrss/fastshare">fastshare</a> — 跨设备高速文件传输平台，Spring Boot 3 + Vue 3 + WebSocket</li>
+<li><a href="https://github.com/AstonKrss/TestForge-agent">TestForge-agent</a> — 自然语言驱动的 Web QA Agent，Playwright 多 Agent 协作</li>
+<li><a href="https://github.com/AstonKrss/toolbox">toolbox</a> — JavaSE 命令行工具箱，IO / 多线程 / 网络 / 设计模式的练习场</li>
+<li><a href="https://github.com/AstonKrss/java_web">java_web</a> — Java Web 与 Spring Cloud 微服务练习</li>
+</ul>
+<p><strong>未公开</strong>：个人博客系统（Next.js 15 + Spring Boot 3.2，前后端分离，含文章编辑、归档、后台管理），
+因为配置里带密钥，仓库暂时私有。</p>
+<div class="spacer"></div>
+<div align="center">
+  <img src="assets/quote.svg" alt="数据不造假，边界写清楚" width="100%">
+</div>
+
+<div class="spacer"></div>
+<div align="center">
+
+**想聊性能优化、Agent 编排，或者只是想看看某个项目的实现细节 —— 都欢迎。**
+
+[个人主页](https://astonkrss.github.io/) ｜ [GitHub](https://github.com/AstonKrss) ｜ [提 Issue](https://github.com/AstonKrss/heartbeatd/issues)
+
+</div>
+  </div>
+  <div class="footer">提示：右上角切换深浅色，看两种主题下的实际观感。</div>
+</div>
+<script>
+  const t = document.getElementById('t'), root = document.documentElement;
+  t.onclick = () => {
+    const d = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', d ? 'light' : 'dark');
+  };
+</script>
+</body>
+</html>

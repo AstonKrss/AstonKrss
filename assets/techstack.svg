@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="118" viewBox="0 0 900 118" role="img"><style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;}</style>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.45" stop-color="#141b2d"/>
+      <stop offset="1" stop-color="#0b0f18"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="topline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="blobA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.70"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f472b6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f472b6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="0.55" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#05070d" flood-opacity="0.55"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <clipPath id="avatarClip"><circle cx="96" cy="116" r="46"/></clipPath>
+  </defs>
+<defs><clipPath id="cc"><rect width="900" height="118" rx="20" ry="20"/></clipPath></defs><g clip-path="url(#cc)">
+  <rect x="0" y="0" width="900" height="118" fill="url(#base)"/>
+  <g filter="url(#soft)" opacity="0.72">
+    <ellipse cx="144" cy="12" rx="270" ry="65" fill="url(#blobA)"/>
+    <ellipse cx="774" cy="21" rx="252" ry="73" fill="url(#blobB)"/>
+    <ellipse cx="450" cy="124" rx="306" ry="57" fill="url(#blobC)"/>
+  </g>
+  <rect x="0" y="0" width="900" height="118" fill="url(#base)" opacity="0.52"/>
+  <rect x="0" y="0" width="900" height="118" filter="url(#grain)" opacity="0.05"/>
+  <g >
+    <rect x="8" y="8" width="884" height="102" rx="18" fill="url(#glass)"
+          stroke="url(#edge)" stroke-width="1.2" filter="url(#shadow)"/>
+    <rect x="9" y="9" width="882" height="1.4" rx="0.7" fill="url(#topline)"/>
+  </g><rect x="102.33999999999997" y="24" width="50.4" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="120.33999999999997" cy="37.5" r="3" fill="#555555"/><text x="129.33999999999997" y="42.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">C</text><rect x="192.73999999999998" y="24" width="114.2" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="210.73999999999998" cy="37.5" r="3" fill="#f34b7d"/><text x="219.73999999999998" y="42.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">C++17 / 20</text><rect x="346.98" y="24" width="57.7" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="364.98" cy="37.5" r="3" fill="#00ADD8"/><text x="373.98" y="42.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">Go</text><rect x="444.66" y="24" width="72.2" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="462.66" cy="37.5" r="3" fill="#b07219"/><text x="471.66" y="42.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">Java</text><rect x="556.9000000000001" y="24" width="86.8" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="574.9000000000001" cy="37.5" r="3" fill="#3572A5"/><text x="583.9000000000001" y="42.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">Python</text><rect x="683.7" y="24" width="114.0" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="701.7" cy="37.5" r="3" fill="#3178c6"/><text x="710.7" y="42.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">TypeScript</text><rect x="55.72000000000003" y="67" width="76.4" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="73.72000000000003" cy="80.5" r="3" fill="#FCC624"/><text x="82.72000000000003" y="85.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">Linux</text><rect x="172.16000000000003" y="67" width="113.4" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="190.16000000000003" cy="80.5" r="3" fill="#8b5cf6"/><text x="199.16000000000003" y="85.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">WebSocket</text><rect x="325.56" y="67" width="119.0" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="343.56" cy="80.5" r="3" fill="#00758F"/><text x="352.56" y="85.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">MySQL / PG</text><rect x="484.56" y="67" width="108.1" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="502.56" cy="80.5" r="3" fill="#f472b6"/><text x="511.56" y="85.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">OCR / NER</text><rect x="632.64" y="67" width="109.8" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="650.64" cy="80.5" r="3" fill="#ff6b6b"/><text x="659.64" y="85.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">LangGraph</text><rect x="782.4" y="67" width="61.9" height="27.0" rx="13.5" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><circle cx="800.4" cy="80.5" r="3" fill="#F05032"/><text x="809.4" y="85.5" font-size="14" font-weight="500" fill="#e6ecfa" opacity="1.0">Git</text></g></svg>
